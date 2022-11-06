@@ -5,6 +5,8 @@ const getList = async () => {
     return d
 }
 getList().then(res => {
-    console.log(res.data.list.vlist)
+    if (res.data.list.vlist && res.data.list.vlist.length) {
+        console.log(res.data.list.vlist)
+    }
 })
 
