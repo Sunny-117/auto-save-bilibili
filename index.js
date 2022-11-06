@@ -1,5 +1,5 @@
 
-let midd = '351534170'
+let midd = '28696526'
 const getList = async (pn) => {
     const res = await fetch(`https://api.bilibili.com/x/space/arc/search?mid=${midd}&ps=30&tid=0&pn=${pn}&keyword=&order=pubdate&order_avoided=true&jsonp=jsonp`)
     const d = await res.json()
