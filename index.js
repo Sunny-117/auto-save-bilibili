@@ -21,7 +21,8 @@ const final = async () => {
     }
     console.log(arr)
     arr.forEach(ele => {
-        downFlie(ele)
+        console.log(ele)
+        // downFlie(ele)
     })
 }
 
@@ -45,4 +46,3 @@ function downFlie(jsonObj) {
     elementA.click();
     document.body.removeChild(elementA);
 }
-downFlie({ a: 1 })
