@@ -11,14 +11,13 @@ const saveArrList = async () => {
     if (res.data.list.vlist && res.data.list.vlist.length) {
         arr.push(...res.data.list.vlist)
     }
-    return arr;
+}
+const final = async () => {
+    const newArr = await saveArrList()
+    console.log(newArr)
 }
 
-saveArrList().then(res => {
-    console.log(res)
-})
-
-
+final()
 
 
 function downFlie(jsonObj) {
