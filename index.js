@@ -22,7 +22,7 @@ const final = async () => {
     console.log(arr)
     arr.forEach(ele => {
         console.log(ele)
-        // downFlie(ele)
+        downFlie(ele)
     })
 }
 
