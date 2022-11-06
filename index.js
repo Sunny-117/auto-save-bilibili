@@ -22,8 +22,8 @@ const final = async () => {
         pn++
     }
     console.log(arr)
-    arr.forEach(ele => {
-    })
+    const a = JSON.stringify(arr)
+    console.log(a)
 }
 
 final()
