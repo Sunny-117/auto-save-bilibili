@@ -15,7 +15,6 @@ const saveArrList = async (pn) => {
 const final = async () => {
     let pn = 1;
     await saveArrList(pn)
-    console.log(arr)
 }
 
 final()
