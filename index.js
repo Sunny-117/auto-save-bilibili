@@ -4,19 +4,21 @@ const getList = async () => {
     const d = await res.json()
     return d
 }
-const arr = []
+
 
 
 const saveArrList = async () => {
+    const arr = []
     const res = await getList()
     if (res.data.list.vlist && res.data.list.vlist.length) {
         arr.push(...res.data.list.vlist)
-        console.log(arr)
     }
+    return arr;
 }
 
-saveArrList()
+const arr = saveArrList()
 
+console.log(arr)
 
 
 
