@@ -17,7 +17,6 @@ const saveArrList = async (pn) => {
 const final = async () => {
     let pn = 1;
     while (pn <= 10) {
-        // console.log(pn)
         await saveArrList(pn)
         pn++
     }
