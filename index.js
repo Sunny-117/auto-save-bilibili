@@ -4,11 +4,14 @@ const getList = async () => {
     const d = await res.json()
     return d
 }
+const arr = []
 getList().then(res => {
     if (res.data.list.vlist && res.data.list.vlist.length) {
-        console.log(res.data.list.vlist)
+        arr.push(...res.data.list.vlist)
+        console.log(arr)
     }
 })
+
 
 
 
