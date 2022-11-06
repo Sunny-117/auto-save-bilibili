@@ -1,7 +1,7 @@
 
 
 const getList = async (pn) => {
-    const res = await fetch(`https://api.bilibili.com/x/space/arc/search?mid=12890453&ps=30&tid=0&pn=${pn}&keyword=&order=pubdate&order_avoided=true&jsonp=jsonp`)
+    const res = await fetch(`https://api.bilibili.com/x/space/arc/search?mid=378372969&ps=30&tid=0&pn=${pn}&keyword=&order=pubdate&order_avoided=true&jsonp=jsonp`)
     const d = await res.json()
     return d
 }
