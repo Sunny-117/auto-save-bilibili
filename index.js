@@ -5,12 +5,17 @@ const getList = async () => {
     return d
 }
 const arr = []
-getList().then(res => {
+
+
+const saveArrList = async () => {
+    const res = await getList()
     if (res.data.list.vlist && res.data.list.vlist.length) {
         arr.push(...res.data.list.vlist)
         console.log(arr)
     }
-})
+}
+
+saveArrList()
 
 
 
