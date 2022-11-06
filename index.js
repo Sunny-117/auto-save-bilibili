@@ -9,6 +9,7 @@ const arr = []
 const saveArrList = async (pn) => {
     const res = await getList(pn)
     if (res.data.list.vlist && res.data.list.vlist.length) {
+        console.log(res.data.list.vlist)
         arr.push(...res.data.list.vlist)
     }
 }
@@ -21,8 +22,8 @@ const final = async () => {
     }
     console.log(arr)
     arr.forEach(ele => {
-        console.log(ele)
-        downFlie(ele)
+        // console.log(ele)
+        // downFlie(ele)
     })
 }
 
