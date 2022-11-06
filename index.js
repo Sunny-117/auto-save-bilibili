@@ -16,9 +16,10 @@ const saveArrList = async () => {
     return arr;
 }
 
-const arr = saveArrList()
+saveArrList().then(res => {
+    console.log(res)
+})
 
-console.log(arr)
 
 
 
