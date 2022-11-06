@@ -9,14 +9,15 @@ const arr = []
 const saveArrList = async (pn) => {
     const res = await getList(pn)
     if (res.data.list.vlist && res.data.list.vlist.length) {
-        console.log(res.data.list.vlist)
-        arr.push(...res.data.list.vlist)
+        res.data.list.vlist.forEach(ele => {
+            arr.push(ele.title)
+        })
     }
 }
 const final = async () => {
     let pn = 1;
     while (pn <= 2) {
-        console.log(pn)
+        // console.log(pn)
         await saveArrList(pn)
         pn++
     }
