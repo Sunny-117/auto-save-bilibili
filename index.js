@@ -1,7 +1,7 @@
 
-let mid = '492976859'
+let midd = '492976859'
 const getList = async (pn) => {
-    const res = await fetch(`https://api.bilibili.com/x/space/arc/search?mid=${mid}&ps=30&tid=0&pn=${pn}&keyword=&order=pubdate&order_avoided=true&jsonp=jsonp`)
+    const res = await fetch(`https://api.bilibili.com/x/space/arc/search?mid=${midd}&ps=30&tid=0&pn=${pn}&keyword=&order=pubdate&order_avoided=true&jsonp=jsonp`)
     const d = await res.json()
     return d
 }
@@ -20,7 +20,7 @@ const final = async () => {
         await saveArrList(pn)
         pn++
     }
-    console.log(arr)
+    // console.log(arr)
     const a = JSON.stringify(arr)
     console.log(a)
 }
