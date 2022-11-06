@@ -1,12 +1,10 @@
 
+let pn = 10;
 const getList = async () => {
-    const res = await fetch('https://api.bilibili.com/x/space/arc/search?mid=12890453&ps=30&tid=0&pn=2&keyword=&order=pubdate&order_avoided=true&jsonp=jsonp')
+    const res = await fetch(`https://api.bilibili.com/x/space/arc/search?mid=12890453&ps=30&tid=0&pn=${pn}&keyword=&order=pubdate&order_avoided=true&jsonp=jsonp`)
     const d = await res.json()
     return d
 }
-
-
-
 const saveArrList = async () => {
     const arr = []
     const res = await getList()
